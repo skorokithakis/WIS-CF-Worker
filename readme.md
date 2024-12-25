@@ -20,5 +20,6 @@ Speech is sent out from the device to a chosen endpoint using the options as def
 - Sign up for a Cloudflare account. This is currently free and allows for up to 1000 calls a day
 
 - [Deploy](https://developers.cloudflare.com/workers/wrangler/commands/#deploy) the code to your own worker 
-
+	-- [Enable AI Binding](https://developers.cloudflare.com/workers/wrangler/configuration/#workers-ai) to run machine learning models
+    
 - In your Willow Application Server, modify the Willow Inference Server Speech Recognition URL to point to your new published endpoint
