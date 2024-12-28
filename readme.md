@@ -15,11 +15,14 @@ Speech is sent out from the device to a chosen endpoint using the options as def
 
 [Cloudflare's Workers](https://developers.cloudflare.com/workers/) provide us with a free (limited calls) hosted alternative environment. 
 
++ [Get started - CLI · Cloudflare Workers docs](https://developers.cloudflare.com/workers/get-started/guide/)
++ [First Worker · Cloudflare Learning Paths](https://developers.cloudflare.com/learning-paths/workers/get-started/first-worker/)
+
 ## Instructions
 
-- Sign up for a Cloudflare account. This is currently free and allows for up to 1000 calls a day
++ Sign up for a Cloudflare account. This is currently free and allows for up to 1000 calls a day
 
-- [Deploy](https://developers.cloudflare.com/workers/wrangler/commands/#deploy) the code to your own worker 
-	-- [Enable AI Binding](https://developers.cloudflare.com/workers/wrangler/configuration/#workers-ai) to run machine learning models
-    
-- In your Willow Application Server, modify the Willow Inference Server Speech Recognition URL to point to your new published endpoint
++ [Deploy](https://developers.cloudflare.com/workers/wrangler/commands/#deploy) the code to your own worker
+	+ Note: You must [Enable AI Binding](https://developers.cloudflare.com/workers/wrangler/configuration/#workers-ai) to run machine learning models
+
++ In your Willow Application Server, modify the Willow Inference Server Speech Recognition URL to point to your new published endpoint
