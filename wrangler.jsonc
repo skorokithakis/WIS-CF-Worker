@@ -1,0 +1,6 @@
+{
+"name": "wis-cf-worker",
+"compatibility_date": "2025-03-21",
+"main": "src/index.js",
+"ai": { "binding": "AI" }
+}
