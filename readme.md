@@ -1,6 +1,6 @@
 # WIS replacement using CF Worker AI
 
-[Willow-inference-server](https://github.com/toverainc/willow-inference-server) (WIS) allows us to use local CUDA cores to translate speech to text, text to speech, and many other services. This project is intended to move the local functionality to a (free) Cloudflare Worker AI using openAI Whisper model and Google TTS. 
+[Willow-inference-server](https://github.com/toverainc/willow-inference-server) (WIS) allows us to use local CUDA cores to translate speech to text, text to speech, and many other services. This project is intended to move the local functionality to a (free) Cloudflare Worker AI using openAI Whisper model and Google TTS.
 
 
 # Ported functionality
@@ -15,10 +15,12 @@ Speech is sent out from the device to the /api/willow endpoint using the options
 
 After the device processes the STT output, e.g. by sending it to a Home Assistant application or to an LLM, it receives back a textual response. The device then displays that response on the screen and calls the /api/tts endpoint of WIS in order to read the response outloud. The endpoint uses Google's (undocumented) TTS endpoint to convert the text to an MP3. Note that Google's TTS endpoint can only read text that does not exceed 200 characters.
 
+You can also use the /api/melotts endpoint, which uses CloudFlare's own MeloTTS engine, which potentially sounds more natural and doesn't have the 200 character limit.
+
 
 # Platform
 
-[Cloudflare's Workers](https://developers.cloudflare.com/workers/) provide us with a free (limited calls) hosted alternative serverless environment. 
+[Cloudflare's Workers](https://developers.cloudflare.com/workers/) provide us with a free (limited calls) hosted alternative serverless environment.
 
 + [Get started - CLI · Cloudflare Workers docs](https://developers.cloudflare.com/workers/get-started/guide/)
 + [First Worker · Cloudflare Learning Paths](https://developers.cloudflare.com/learning-paths/workers/get-started/first-worker/)
